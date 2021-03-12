@@ -20,7 +20,6 @@ async function execCommandSync(command){
     execSync(command,{stdio: 'inherit'})
 }
 
-
 async function start(){
     let command = "miner start";
     await execCommandSync(command)
@@ -36,49 +35,49 @@ async function main(){
 
     console.log("[system is boot] -  init miner automatically ")
 
-    const listTime = ["00 00 * * *",
-                      "00 02 * * *",
-                      "15 02 * * *",
-                      "15 04 * * *",
-                      "30 04 * * *",
-                      "30 06 * * *",
-                      "45 06 * * *",
-                      "45 08 * * *",
-                      "00 09 * * *",
-                      "15 09 * * *",
-                      "30 09 * * *",
-                      "30 11 * * *",
-                      "45 11 * * *",
-                      "45 13 * * *",
-                      "00 14 * * *",
-                      "00 16 * * *",
-                      "15 16 * * *",
-                      "15 18 * * *",
-                      "30 18 * * *",
-                      "30 20 * * *",
-                      "45 20 * * *",
-                      "45 22 * * *",
-                      "00 23 * * *"]
+    const listJob = [{time:"00 00 * * *", action:1},
+                     {time:"00 02 * * *", action:0},
+                     {time:"15 02 * * *", action:1},
+                     {time:"15 04 * * *", action:0},
+                     {time:"30 04 * * *", action:1},
+                     {time:"30 06 * * *", action:0},
+                     {time:"45 06 * * *", action:1},
+                     {time:"45 08 * * *", action:0},
+                     {time:"00 09 * * *", action:1},
+                     {time:"15 09 * * *", action:0},
+                     {time:"30 09 * * *", action:1},
+                     {time:"30 11 * * *", action:0},
+                     {time:"45 11 * * *", action:1},
+                     {time:"45 13 * * *", action:0},
+                     {time:"00 14 * * *", action:1},
+                     {time:"00 16 * * *", action:0},
+                     {time:"15 16 * * *", action:1},
+                     {time:"15 18 * * *", action:0},
+                     {time:"30 18 * * *", action:1},
+                     {time:"30 20 * * *", action:0},
+                     {time:"45 20 * * *", action:1},
+                     {time:"45 22 * * *", action:0},
+                     {time:"00 23 * * *", action:1}]
 
-    let run = 1;
 
-    for (let time of listTime){
+    for (let job of listJob){
 
-        cron.schedule(time, () => {
+        cron.schedule(job.time, () => {
 
-            if(run){
-                console.log(time, "-> start");
+            if(job.action === 1){
+                console.log(job.time, "-> start");
                 start()
-                run = 0
-            }else{
-                console.log(time, "-> stop");b
+            }
+
+            if(job.action === 0){
+                console.log(job.time, "-> stop");
                 stop()
-                run = 1
             }
         });
-
     }
 }
+
+
 
 
 

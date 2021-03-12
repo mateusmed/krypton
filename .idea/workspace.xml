@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71406331-5615-42a9-98eb-07701a53d962" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deservedRestKrypton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/deservedRestKrypton.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +32,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.34" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shell" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -43,7 +44,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615553832333</updated>
-      <workItem from="1615553833566" duration="13052000" />
+      <workItem from="1615553833566" duration="13288000" />
+      <workItem from="1615585101612" duration="662000" />
     </task>
     <servers />
   </component>
