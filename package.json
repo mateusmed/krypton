@@ -1,0 +1,25 @@
+{
+  "name": "krypton",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusmed/krypton.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateusmed/krypton/issues"
+  },
+  "homepage": "https://github.com/mateusmed/krypton#readme",
+
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-cron": "^2.0.3",
+    "node-schedule": "^2.0.0"
+  }
+}
