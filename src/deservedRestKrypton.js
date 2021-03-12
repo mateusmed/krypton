@@ -62,22 +62,18 @@ async function main(){
 
     let run = 1;
 
-
-    const listTest = ["33 12 * * *",
-                      "34 12 * * *"];
-
-
     for (let time of listTest){
 
         cron.schedule(time, () => {
 
             if(run){
                 console.log(time, "-> start");
-              //  start()
+                start()
                 run = 0
             }else{
                 console.log(time, "-> stop");
-                //stop()
+                stop()
+                run = 1
             }
         });
 
