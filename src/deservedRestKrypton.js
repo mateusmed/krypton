@@ -62,7 +62,7 @@ async function main(){
 
     let run = 1;
 
-    for (let time of listTest){
+    for (let time of listTime){
 
         cron.schedule(time, () => {
 
@@ -71,7 +71,7 @@ async function main(){
                 start()
                 run = 0
             }else{
-                console.log(time, "-> stop");
+                console.log(time, "-> stop");b
                 stop()
                 run = 1
             }
