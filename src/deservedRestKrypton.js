@@ -35,29 +35,15 @@ async function main(){
 
     console.log("[system is boot] -  init miner automatically ")
 
-    const listJob = [{time:"00 00 * * *", action:1},
-                     {time:"00 02 * * *", action:0},
-                     {time:"15 02 * * *", action:1},
-                     {time:"15 04 * * *", action:0},
-                     {time:"30 04 * * *", action:1},
-                     {time:"30 06 * * *", action:0},
-                     {time:"45 06 * * *", action:1},
-                     {time:"45 08 * * *", action:0},
-                     {time:"00 09 * * *", action:1},
-                     {time:"15 09 * * *", action:0},
-                     {time:"30 09 * * *", action:1},
-                     {time:"30 11 * * *", action:0},
-                     {time:"45 11 * * *", action:1},
-                     {time:"45 13 * * *", action:0},
-                     {time:"00 14 * * *", action:1},
-                     {time:"00 16 * * *", action:0},
-                     {time:"15 16 * * *", action:1},
-                     {time:"15 18 * * *", action:0},
-                     {time:"30 18 * * *", action:1},
-                     {time:"30 20 * * *", action:0},
-                     {time:"45 20 * * *", action:1},
-                     {time:"45 22 * * *", action:0},
-                     {time:"00 23 * * *", action:1}]
+    const listJob = [{time:"45 06 * * *", action:0},
+                     {time:"00 07 * * *", action:1},
+                     {time:"45 09 * * *", action:0},
+                     {time:"00 10 * * *", action:1},
+                     {time:"45 12 * * *", action:0},
+                     {time:"00 13 * * *", action:1},
+                     {time:"45 15 * * *", action:0},
+                     {time:"00 16 * * *", action:1},
+                     ]
 
 
     for (let job of listJob){
