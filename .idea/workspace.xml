@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71406331-5615-42a9-98eb-07701a53d962" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deserved/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rigBrain/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rigBrain/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rigBrain/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rigBrain/src/entity/board.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rigBrain/src/entity/machine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rigBrain/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/deserved/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/deserved/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deservedRestKrypton.js" beforeDir="false" afterPath="$PROJECT_DIR$/deserved/src/deservedRestKrypton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigBrain/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigBrain/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigBrain/src/entity/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/entity/board.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigBrain/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +34,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.37" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rigBrain" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.43" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -50,6 +43,8 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="C:\Users\MateusMedeirosdosSan\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\203.5981.135\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -74,7 +69,10 @@
       <workItem from="1615780387376" duration="1910000" />
       <workItem from="1616181792368" duration="1937000" />
       <workItem from="1616421381433" duration="95000" />
-      <workItem from="1618236109378" duration="6871000" />
+      <workItem from="1618236109378" duration="6897000" />
+      <workItem from="1618490143757" duration="1242000" />
+      <workItem from="1619721071389" duration="3397000" />
+      <workItem from="1619788058367" duration="11569000" />
     </task>
     <servers />
   </component>
@@ -91,5 +89,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -5,8 +5,10 @@ import bodyParser from 'body-parser';
 import Board from './entity/board.js';
 import Machine from './entity/machine.js';
 
+
 const app = express();
 const PORT = 5000;
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -14,26 +16,51 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const key = "myHash";
 
 
-const listMachine = [new Machine("vermelha", 2, "A0"),
+const listMachine = [new Machine("vermelha", 7, "A0"),
                      new Machine("azul", 3, "A1")]
 
-const board1 = new Board("COM4", listMachine);
+const arduinoUno = new Board("COM4", listMachine);
 // const board2 = new Board("COM3");
 
 
-app.get("/{machine}/status", (req, res) => {
-    res.json({ message: 'success!'});
+app.get("/:machineName/status", async (req,
+                                       res) => {
+
+    let machineName = req.params.machineName;
+
+    let machineFound = arduinoUno.getMachine(machineName);
+
+    let value;
+
+    if(machineFound){
+         value = await arduinoUno.status(machineFound);
+    }
+
+    res.json({ message: value});
 });
 
 
-app.get("/{board}/{pin}/off", (req, res) => {
-    res.json({ message: 'success!'})
+app.get("/:machineName/on", async (req,
+                                                 res) => {
+
+    let machineName = req.params.machineName;
+    let machineFound = arduinoUno.getMachine(machineName);
+
+    arduinoUno.turnOn(machineFound);
+
+    res.json({ message: "ok"});
 });
 
-app.get("/{board}/{pin}/off", (req, res) => {
-    res.json({ message: 'success!'})
-});
 
+app.get("/:machineName/off", (req, res) => {
+
+    let machineName = req.params.machineName;
+    let machineFound = arduinoUno.getMachine(machineName);
+
+    arduinoUno.turnOff(machineFound);
+
+    res.json({ message: "ok"});
+});
 
 
 
@@ -45,7 +72,7 @@ function startServer() {
 }
 
 // verificar todas as placas
-board1.on('ready', startServer);
+arduinoUno.board.on('ready', startServer);
 
 
 

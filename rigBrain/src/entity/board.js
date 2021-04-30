@@ -1,31 +1,12 @@
 import five from 'johnny-five';
 import cron from "node-cron";
-import dns from 'dns';
+// import dns from 'dns';
+
+import isOnline  from "is-online";
+
+const time = "*/1 * * * *";
 
 
-const googleUrl = 'www.google.com';
-
-const time = ""
-
-
-function monitoringInternet(machine){
-
-    cron.schedule(time, () => {
-
-        dns.resolve(googleUrl, async (err) => {
-
-            if (err) {
-                console.log("No connection");
-                let statusPin = await this.sensor(machine.pinSense);
-
-                if(statusPin === 0){
-                    this.turnOff(machine.pinAction);
-                }
-            }
-        });
-
-    });
-}
 
 class Board{
 
@@ -36,14 +17,45 @@ class Board{
         });
 
         this.machineList = machineList;
-
-        for(let machine of this.machineList){
-            monitoringInternet(machine)
-        }
+        this.monitoringInternet();
     }
 
-    turnOn(pinNumber){
-        let pin = new five.Pin(pinNumber);
+    monitoringInternet(){
+
+        cron.schedule(time, async() => {
+
+            console.log("verifidanco conexão com internet");
+
+            let isConnected = await isOnline({ timeout: 1000 });
+
+            if(!isConnected){
+
+                console.log("sem conexão");
+                for (let machine of this.machineList){
+
+                    console.log("desligando maquina: " , machine.name);
+
+                    //verificar se realmente maquina está ligada. sensor
+                    this.turnOff(machine);
+                }
+            }
+        });
+    }
+
+    getMachine(name){
+
+        let machineFound =  this.machineList.find((machine) => {
+          return machine.name === name;
+        })
+
+        console.log("maquina encontrada: ", machineFound);
+
+        return machineFound;
+    }
+
+    turnOn(machine){
+
+        let pin = new five.Pin(machine.pinAction);
         pin.high()
 
         setTimeout(function(){
@@ -52,8 +64,12 @@ class Board{
         }, 3000);
     }
 
-    turnOff(pinNumber){
-        let pin = new five.Pin(pinNumber);
+    turnOff(machine){
+
+        console.log("Machine ", JSON.stringify(machine));
+
+        let pin = new five.Pin(machine.pinAction);
+
         pin.high()
 
         setTimeout(function(){
@@ -62,9 +78,23 @@ class Board{
         }, 5000);
     }
 
-    async sensor(pinNumber){
+    async status(machine){
 
-        let sensor = new five.Sensor(pinNumber);
+        let pin = new five.Pin(machine.pinAction);
+
+        let myValue = 0;
+
+        await pin.read((error, value) => {
+            myValue = value;
+        });
+
+        return myValue;
+    }
+
+
+    async sensor(machine){
+
+        let sensor = new five.Sensor(machine.pinSense);
         let value = 0;
 
         // Scale the sensor's data from 0-1023 to 0-10 and log changes
