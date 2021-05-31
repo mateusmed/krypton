@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71406331-5615-42a9-98eb-07701a53d962" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/rigBrain/src/entity/internetModem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rigBrain/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rigBrain/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rigBrain/src/entity/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/entity/board.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigBrain/src/entity/machine.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/entity/machine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rigBrain/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +73,11 @@
       <workItem from="1618490143757" duration="1242000" />
       <workItem from="1619721071389" duration="3397000" />
       <workItem from="1619788058367" duration="11569000" />
+      <workItem from="1620028244121" duration="727000" />
+      <workItem from="1620827504436" duration="41000" />
+      <workItem from="1620827548033" duration="49000" />
+      <workItem from="1622484653697" duration="3839000" />
+      <workItem from="1622493985879" duration="2821000" />
     </task>
     <servers />
   </component>
