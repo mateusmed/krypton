@@ -11,7 +11,8 @@ class Machine{
 
     turnOn(){
 
-        let pin = new five.Pin(this.pinAction);
+        let pin = new five.Pin({pin: this.pinAction,
+                                     type: "digital"});
         pin.high()
 
         setTimeout(function(){
@@ -20,9 +21,26 @@ class Machine{
         }, 3000);
     }
 
+    turnOnPin(){
+
+        let pin = new five.Pin({pin: this.pinAction,
+                                     type: "digital"});
+
+        pin.high()
+    }
+
+    turnOffPin(){
+
+        let pin = new five.Pin({pin: this.pinAction,
+                                     type: "digital"});
+
+        pin.low();
+    }
+
     turnOff(){
 
-        let pin = new five.Pin(this.pinAction);
+        let pin = new five.Pin({pin: this.pinAction,
+                                     type: "digital"});
 
         pin.high()
 
@@ -32,20 +50,21 @@ class Machine{
         }, 5000);
     }
 
-    async status(){
+    status(){
 
-        let pin = new five.Pin(this.pinAction);
+        //query dont use promise,
+        return new Promise((resolve, reject) =>{
 
-        let myValue = 0;
+            let pin = new five.Pin({pin: this.pinAction,
+                                         type: "digital"});
 
-        await pin.read((error, value) => {
-            myValue = value;
-        });
-
-        return myValue;
+            pin.query( (state) => {
+                resolve(state);
+            });
+        })
     }
 
-    async sensor(machine){
+    async sensor(){
 
         let sensor = new five.Sensor(this.pinSense);
         let value = 0;

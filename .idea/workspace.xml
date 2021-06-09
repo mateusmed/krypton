@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71406331-5615-42a9-98eb-07701a53d962" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rigBrain/src/entity/internetModem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rigBrain/src/entity/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/entity/board.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rigBrain/src/entity/machine.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/entity/machine.js" afterDir="false" />
@@ -34,7 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.43" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -77,7 +76,9 @@
       <workItem from="1620827504436" duration="41000" />
       <workItem from="1620827548033" duration="49000" />
       <workItem from="1622484653697" duration="3839000" />
-      <workItem from="1622493985879" duration="2821000" />
+      <workItem from="1622493985879" duration="4801000" />
+      <workItem from="1622551502735" duration="32000" />
+      <workItem from="1623253330528" duration="9854000" />
     </task>
     <servers />
   </component>

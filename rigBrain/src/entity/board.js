@@ -59,11 +59,11 @@ class Board{
 
                 console.log("Com conexão");
 
-                for (let machine of this.machineList){
-
-                    console.log("Ligando maquina: " , machine.name);
-                    machine.turnOn();
-                }
+                // for (let machine of this.machineList){
+                //
+                //     console.log("Ligando maquina: " , machine.name);
+                //     machine.turnOn();
+                // }
             }
 
         });
