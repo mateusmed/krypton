@@ -25,9 +25,10 @@ const listMachine = [new Machine("amarela", 2, "A0"),
 
 const internetModem = new InternetModem("modemNET", 13);
 
-const arduinoUno = new Board("COM4", listMachine, internetModem);
-// const board2 = new Board("COM3");
+// const arduinoUno = new Board("COM4", listMachine, internetModem);
+const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
 
+// const board2 = new Board("COM3");
 
 
 // TODO FAZER UM ENVIO DE EMAIL PARA MANDAR UM RELATORIO DIARIO
