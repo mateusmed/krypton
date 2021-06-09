@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="71406331-5615-42a9-98eb-07701a53d962" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rigBrain/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../microcontrollers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,7 +75,7 @@
       <workItem from="1622484653697" duration="3839000" />
       <workItem from="1622493985879" duration="4801000" />
       <workItem from="1622551502735" duration="32000" />
-      <workItem from="1623253330528" duration="15743000" />
+      <workItem from="1623253330528" duration="17332000" />
     </task>
     <servers />
   </component>
