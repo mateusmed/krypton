@@ -34,6 +34,12 @@ const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
 // TODO FAZER UM ENVIO DE EMAIL PARA MANDAR UM RELATORIO DIARIO
 
 
+app.get("/healthcheck", async (req,
+                               res) => {
+
+    res.json({ message: "system is up"});
+});
+
 
 app.get("/internetModem/reboot", async (req,
                                        res) => {
