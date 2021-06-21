@@ -26,8 +26,8 @@ const listMachine = [new Machine("amarela", 2, "A0"),
 const internetModem = new InternetModem("modemNET", 13);
 
 // const arduinoUno = new Board("COM4", listMachine, internetModem);
-const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
 
+const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
 // const board2 = new Board("COM3");
 
 
@@ -49,53 +49,29 @@ app.get("/internetModem/reboot", async (req,
 });
 
 
-app.get("/:machineName/status", async (req,
-                                       res) => {
-
-    let machineName = req.params.machineName;
-
-    let machineFound = arduinoUno.getMachine(machineName);
-
-    let value = 0;
-
-    if(machineFound){
-         console.log(`${machineFound.name} obtendo valor`);
-         value = await machineFound.status();
-    }
-
-    console.log(`${machineFound.name} tem status: ${value}`);
-
-
-    setTimeout(function(){
-        res.json({ message: value});
-
-    }, 1000);
-});
-
-
-
-app.get("/:machineName/pinOn", async (req,
-                                   res) => {
-
-    let machineName = req.params.machineName;
-    let machineFound = arduinoUno.getMachine(machineName);
-
-    machineFound.turnOnPin();
-
-    res.json({ message: "ok"});
-});
-
-app.get("/:machineName/pinOff", async (req,
-                                      res) => {
-
-    let machineName = req.params.machineName;
-    let machineFound = arduinoUno.getMachine(machineName);
-
-    machineFound.turnOffPin();
-
-    res.json({ message: "ok"});
-});
-
+//todo desable temp
+// app.get("/:machineName/status", async (req,
+//                                        res) => {
+//
+//     let machineName = req.params.machineName;
+//
+//     let machineFound = arduinoUno.getMachine(machineName);
+//
+//     let value = 0;
+//
+//     if(machineFound){
+//          console.log(`${machineFound.name} obtendo valor`);
+//          value = await machineFound.status();
+//     }
+//
+//     console.log(`${machineFound.name} tem status: ${value}`);
+//
+//
+//     setTimeout(function(){
+//         res.json({ message: value});
+//
+//     }, 1000);
+// });
 
 
 app.get("/:machineName/on", async (req,
@@ -104,9 +80,16 @@ app.get("/:machineName/on", async (req,
     let machineName = req.params.machineName;
     let machineFound = arduinoUno.getMachine(machineName);
 
-    machineFound.turnOn();
+    if(machineFound) {
+        machineFound.turnOn();
 
-    res.json({ message: "ok"});
+        res.status(200);
+        res.json({message: "ok"});
+        return;
+    }
+
+    res.status(404);
+    res.json({message: "machine not found"});
 });
 
 app.get("/:machineName/off", (req, res) => {
@@ -114,9 +97,16 @@ app.get("/:machineName/off", (req, res) => {
     let machineName = req.params.machineName;
     let machineFound = arduinoUno.getMachine(machineName);
 
-    machineFound.turnOff();
+    if(machineFound) {
+        machineFound.turnOff();
 
-    res.json({ message: "ok"});
+        res.status(200);
+        res.json({message: "ok"});
+        return;
+    }
+
+    res.status(404);
+    res.json({message: "machine not found"});
 });
 
 

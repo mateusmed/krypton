@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71406331-5615-42a9-98eb-07701a53d962" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rig-brain-front/pages/api/[machine].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig-brain-front/pages/api/[machine].js" beforeDir="false" afterPath="$PROJECT_DIR$/rig-brain-front/pages/api/[machine].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rig-brain-front/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rig-brain-front/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigBrain/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,7 @@
       <workItem from="1623761377450" duration="6326000" />
       <workItem from="1623848968310" duration="3015000" />
       <workItem from="1624032038466" duration="1877000" />
-      <workItem from="1624283854380" duration="8858000" />
+      <workItem from="1624283854380" duration="13292000" />
     </task>
     <servers />
   </component>
