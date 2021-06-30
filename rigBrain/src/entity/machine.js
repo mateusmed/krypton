@@ -1,5 +1,18 @@
 import five from "johnny-five";
 
+
+//gambi utilizando porta analogica
+function machineStatus(stateValue){
+
+    console.log(stateValue);
+    if(stateValue >= 900 && stateValue <= 950  ){
+        return "ligada";
+    }
+
+    return "desligada";
+}
+
+
 class Machine{
 
     constructor(name, pinAction, pinSense) {
@@ -21,22 +34,6 @@ class Machine{
         }, 3000);
     }
 
-    turnOnPin(){
-
-        let pin = new five.Pin({pin: this.pinAction,
-                                     type: "digital"});
-
-        pin.high()
-    }
-
-    turnOffPin(){
-
-        let pin = new five.Pin({pin: this.pinAction,
-                                     type: "digital"});
-
-        pin.low();
-    }
-
     turnOff(){
 
         let pin = new five.Pin({pin: this.pinAction,
@@ -50,33 +47,32 @@ class Machine{
         }, 5000);
     }
 
-    status(){
+    mySense(){
+        let pin = new five.Pin({pin: this.pinSense});
 
         //query dont use promise,
         return new Promise((resolve, reject) =>{
 
-            let pin = new five.Pin({pin: this.pinAction,
-                                         type: "digital"});
-
             pin.query( (state) => {
-                resolve(state);
+                resolve(machineStatus(state.value));
             });
         })
     }
 
-    async sensor(){
-
-        let sensor = new five.Sensor(this.pinSense);
-        let value = 0;
-
-        // Scale the sensor's data from 0-1023 to 0-10 and log changes
-        await sensor.on("change", () => {
-            value = this.scaleTo(0, 10);
-        });
-
-        //colocar um valor 'enum'
-        return value;
-    }
+    // mySense(){
+    //     let sensor = new five.Sensor(this.pinSense);
+    //
+    //     // Scale the sensor's data from 0-1023 to 0-10 and log changes
+    //     return new Promise((resolve, reject) =>{
+    //
+    //
+    //
+    //         sensor.on("change", () => {
+    //             let value = sensor.scaleTo(0, 10);
+    //             resolve(value);
+    //         });
+    //     });
+    // }
 }
 
 export default Machine;

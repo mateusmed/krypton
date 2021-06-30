@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="71406331-5615-42a9-98eb-07701a53d962" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rig-brain-front/pages/api/[machine].js" beforeDir="false" afterPath="$PROJECT_DIR$/rig-brain-front/pages/api/[machine].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rig-brain-front/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rig-brain-front/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigBrain/src/entity/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/entity/board.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigBrain/src/entity/machine.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/entity/machine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rigBrain/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +33,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.17.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../catalog" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -84,7 +84,9 @@
       <workItem from="1623761377450" duration="6326000" />
       <workItem from="1623848968310" duration="3015000" />
       <workItem from="1624032038466" duration="1877000" />
-      <workItem from="1624283854380" duration="13292000" />
+      <workItem from="1624283854380" duration="18513000" />
+      <workItem from="1624487338607" duration="1190000" />
+      <workItem from="1624992813020" duration="7748000" />
     </task>
     <servers />
   </component>
