@@ -1,6 +1,5 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import five from 'johnny-five';
 
 import Board from './entity/board.js';
 import Machine from './entity/machine.js';
@@ -9,7 +8,6 @@ import InternetModem from './entity/internetModem.js'
 
 const app = express();
 const PORT = 5000;
-
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -25,9 +23,10 @@ const listMachine = [new Machine("amarela", 2, "A0"),
                      new Machine("vermelha", 7, "A5")]
 
 
-const internetModem = new InternetModem("modemNET", 13);
+const internetModem = new InternetModem("modemNET", 12);
 
-// const arduinoUno = new Board("COM4", listMachine, internetModem);
+// const arduinoMEGA = new Board("COM4", listMachine, internetModem);
+
 
 // const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
 const arduinoUno = new Board("COM4", listMachine, internetModem);

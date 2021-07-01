@@ -59,20 +59,6 @@ class Machine{
         })
     }
 
-    // mySense(){
-    //     let sensor = new five.Sensor(this.pinSense);
-    //
-    //     // Scale the sensor's data from 0-1023 to 0-10 and log changes
-    //     return new Promise((resolve, reject) =>{
-    //
-    //
-    //
-    //         sensor.on("change", () => {
-    //             let value = sensor.scaleTo(0, 10);
-    //             resolve(value);
-    //         });
-    //     });
-    // }
 }
 
 export default Machine;
