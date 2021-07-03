@@ -20,12 +20,12 @@ async function handler(req, res){
       console.log(`action ${action}`);
 
 
-      let url = `${this.host}${machine}/status`;
+      let url = `${host}${machine}/status`;
 
       if(action){
-        url = `${this.host}${machine}/on`
+        url = `${host}${machine}/on`
       }else{
-        url = `${this.host}${machine}/off`
+        url = `${host}${machine}/off`
       }
 
       let response = await fetch(url);
