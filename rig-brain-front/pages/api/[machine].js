@@ -26,7 +26,7 @@ async function handler(req, res){
 
       let response = await fetch(url);
 
-      console.log("response -> ", JSON.stringfy(response));
+      console.log("response -> ", JSON.stringify(response));
 
       if(response.ok){
         let content = await response.json();
@@ -37,7 +37,7 @@ async function handler(req, res){
       res.status(200).json({ "status": "ok" })
 
   }catch (e) {
-    console.log(`algo deu errado ${JSON.stringfy(e)}`);
+    console.log(`algo deu errado ${JSON.stringify(e)}`);
     res.status(500).json({ "status": "fail" })
   }
 }
