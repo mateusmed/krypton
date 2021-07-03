@@ -89,7 +89,7 @@ app.get("/:machineName/off", (req,
 
 
 app.get("/:machineName/status", async (req,
-                                 res) => {
+                                       res) => {
 
     let machineName = req.params.machineName;
     let machineFound = arduinoUno.getMachine(machineName);
