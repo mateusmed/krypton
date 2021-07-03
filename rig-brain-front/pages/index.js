@@ -8,8 +8,9 @@ function Home() {
 
   const clickButton = async (name, action) => {
 
-
     let response = await fetch(`http://localhost:3000/api/${name}?action=${action}`)
+
+    console.log("response -> ", JSON.stringify(response));
 
     if(response.ok){
       let content = await response.json();
