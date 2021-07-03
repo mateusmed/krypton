@@ -16,7 +16,11 @@ async function handler(req, res){
       let machine = req.query.machine;
       let action = req.query.action;
 
-      let url = "";
+      console.log(`machine ${machine}`);
+      console.log(`action ${action}`);
+
+
+      let url = `${this.host}${machine}/status`;
 
       if(action){
         url = `${this.host}${machine}/on`
@@ -30,14 +34,13 @@ async function handler(req, res){
 
       if(response.ok){
         let content = await response.json();
-
-        console.log("response -> ", content);
+        console.log("content -> ", content);
       }
 
       res.status(200).json({ "status": "ok" })
 
   }catch (e) {
-    console.log(`algo deu errado ${JSON.stringify(e)}`);
+    console.log(`algo deu errado`, e);
     res.status(500).json({ "status": "fail" })
   }
 }
