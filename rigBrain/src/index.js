@@ -28,8 +28,8 @@ const internetModem = new InternetModem("modemNET", 12);
 // const arduinoMEGA = new Board("COM4", listMachine, internetModem);
 
 
-// const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
-const arduinoUno = new Board("COM4", listMachine, internetModem);
+const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
+// const arduinoUno = new Board("COM4", listMachine, internetModem);
 
 
 // TODO FAZER UM ENVIO DE EMAIL PARA MANDAR UM RELATORIO DIARIO
