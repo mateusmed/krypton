@@ -19,7 +19,7 @@ const listMachine = [new Machine("amarela", 2, "A0"),
                      new Machine("azul", 3, "A1"),
                      new Machine("verde01", 4, "A2"),
                      new Machine("verde02", 5, "A3"),
-                     new Machine("branco", 6, "A4"),
+                     new Machine("branca", 6, "A4"),
                      new Machine("vermelha", 7, "A5")]
 
 
