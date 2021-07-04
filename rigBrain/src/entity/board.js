@@ -20,7 +20,7 @@ class Board{
 
 
         //todo pensar em habilitar monitoramento por endpoint
-        this.monitoringInternet();
+        //this.monitoringInternet();
 
 
         //todo pensar em deshabilitar monitoramento por endpoint - encerrar cron
