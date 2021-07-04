@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const key = "myHash";
 
 
-const listMachine = [new Machine("amarela", 2, "A0"),
+const listMachine = [new Machine("amarela", 2, 8),
                      new Machine("azul", 3, "A1"),
                      new Machine("verde01", 4, "A2"),
                      new Machine("verde02", 5, "A3"),
