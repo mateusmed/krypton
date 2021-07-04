@@ -4,7 +4,10 @@ import five from "johnny-five";
 //gambi utilizando porta analogica
 function machineStatus(stateValue){
 
-    console.log(stateValue);
+    console.log("========================");
+    console.log("statusValue -> ", stateValue);
+    console.log("========================");
+
     if(stateValue >= 900 && stateValue <= 950  ){
         return "ligada";
     }
