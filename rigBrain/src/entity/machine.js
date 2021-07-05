@@ -2,6 +2,14 @@ import five from "johnny-five";
 
 
 //gambi utilizando porta analogica
+
+// Analog As Digital
+// new five.Pin({
+//     pin: 14,
+//     type: "digital"
+// });
+
+
 function machineStatus(stateValue){
 
     console.log("========================");
