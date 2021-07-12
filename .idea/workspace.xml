@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71406331-5615-42a9-98eb-07701a53d962" name="Default Changelist" comment="" />
+    <list default="true" id="71406331-5615-42a9-98eb-07701a53d962" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigBrain/src/entity/machine.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/entity/machine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigBrain/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rigBrain/src/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +88,9 @@
       <workItem from="1624992813020" duration="11384000" />
       <workItem from="1625176132453" duration="7085000" />
       <workItem from="1625342950596" duration="5114000" />
-      <workItem from="1625425924785" duration="3651000" />
+      <workItem from="1625425924785" duration="4452000" />
+      <workItem from="1625509523686" duration="158000" />
+      <workItem from="1626093523132" duration="2307000" />
     </task>
     <servers />
   </component>

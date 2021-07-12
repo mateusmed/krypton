@@ -15,12 +15,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const key = "myHash";
 
 
-const listMachine = [new Machine("amarela", 2, "A0"),
-                     new Machine("azul", 3, "A1"),
-                     new Machine("verde01", 4, "A2"),
-                     new Machine("verde02", 5, "A3"),
-                     new Machine("branca", 6, "A4"),
-                     new Machine("vermelha", 7, "A5")]
+const listMachine = [new Machine("amarela", 2, 14),
+                     new Machine("azul", 3, 15),
+                     new Machine("verde01", 4, 16),
+                     new Machine("verde02", 5, 17),
+                     new Machine("branca", 6, 18),
+                     new Machine("vermelha", 7, 19)]
 
 
 const internetModem = new InternetModem("modemNET", 12);
@@ -28,8 +28,10 @@ const internetModem = new InternetModem("modemNET", 12);
 // const arduinoMEGA = new Board("COM4", listMachine, internetModem);
 
 
-const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
+// const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
+
 // const arduinoUno = new Board("COM4", listMachine, internetModem);
+const arduinoUno = new Board("COM8", listMachine, internetModem);
 
 
 // TODO FAZER UM ENVIO DE EMAIL PARA MANDAR UM RELATORIO DIARIO
