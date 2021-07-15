@@ -25,14 +25,11 @@ const listMachine = [new Machine("amarela", 2, 14),
 
 const internetModem = new InternetModem("modemNET", 12);
 
+const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
+
 // const arduinoMEGA = new Board("COM4", listMachine, internetModem);
-
-
-// const arduinoUno = new Board("/dev/ttyACM0", listMachine, internetModem);
-
 // const arduinoUno = new Board("COM4", listMachine, internetModem);
-const arduinoUno = new Board("COM8", listMachine, internetModem);
-
+// const arduinoUno = new Board("COM8", listMachine, internetModem);
 
 // TODO FAZER UM ENVIO DE EMAIL PARA MANDAR UM RELATORIO DIARIO
 
@@ -45,15 +42,22 @@ app.get("/healthcheck", async (req,
 
 
 app.get("/internetModem/reboot", async (req,
-                                       res) => {
+                                        res) => {
 
     arduinoUno.internetModem.reboot();
     res.json({ message: "try reboot"});
 });
 
 
+app.get("/machines", async (req,
+                            res) => {
+
+    res.json({ message: arduinoUno.machineList});
+});
+
+
 app.get("/:machineName/on", async (req,
-                                                  res) => {
+                                   res) => {
 
     let machineName = req.params.machineName;
     let machineFound = arduinoUno.getMachine(machineName);
